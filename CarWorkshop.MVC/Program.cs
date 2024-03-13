@@ -2,6 +2,7 @@ using CarWorkshop.Infrastructure.Extensions;
 using CarWorkshop.Infrastructure.Persistence;
 using CarWorkshop.Infrastructure.Seeders;
 using Microsoft.EntityFrameworkCore;
+using CarWorkshop.Application.Extensions;
 
 namespace CarWorkshop.MVC
 {
@@ -15,6 +16,7 @@ namespace CarWorkshop.MVC
             builder.Services.AddControllersWithViews();
             
             builder.Services.AddInfrastructure(builder.Configuration);
+            builder.Services.AddApplication();
 
             var app = builder.Build();
 
